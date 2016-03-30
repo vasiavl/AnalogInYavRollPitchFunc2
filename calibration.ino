@@ -2,7 +2,8 @@ void calibration()// запускается при подаче питания �
 { 
   
  if(But1==1 ) 
-   { while(n<100){ n++;  delay(10);
+   { delay(10); if(But1==1 ) {
+   while(n<100){ n++;  
  //  for (int i=0; i<= 25; i++)   {int n++;    }
      if (n>20)       {// качаем джой возле нейтрали
       if (minVariationPitch>Pitch) minVariationPitch=Pitch;
@@ -19,7 +20,7 @@ void calibration()// запускается при подаче питания �
       if (minYaw>Yaw)&&(Yaw<200)     minYaw=Yaw;
       if (maxYaw<Yaw)&&(Yaw>700)     maxYaw=Yaw;
                     } 
-                 }
+                 }}
    if (But1==0 )  n=0;
      
    }     
