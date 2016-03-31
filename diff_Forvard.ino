@@ -21,4 +21,5 @@ int differentialForward_ago()
      if  (Roll>580)     {             L= outputPitch;   
                                       R= outputPitch-(outputPitch*outputRollR/150);
                         }
-    }  }
+    } 
+ }

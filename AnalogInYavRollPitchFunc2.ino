@@ -1,3 +1,5 @@
+ #include <EEPROM.h>
+ 
 //#define Button_1      5//че то какая то фигня с этим пином
 // #define Button_2      13
 // #define Button_3      12
