@@ -1,5 +1,5 @@
 void calibration()// запускается при подаче питания с зажатой кнопкой
-{ int n=0; int address = 0;// address in EEPROM
+{ int n=0; 
   
  if(But1==1 ) 
   { delay(10);
@@ -49,20 +49,43 @@ void calibration()// запускается при подаче питания �
   minPitch=          (EEPROM.read(2))*4;// считываем значение по текущему адресу EEPROM
   maxPitch=          (EEPROM.read(3))*4;
   minRoll=           (EEPROM.read(4))*4;
-  maxRoll=           (EEPROM.read(5))*4;
-  minYaw=            (EEPROM.read(6))*4;
-  maxYaw=            (EEPROM.read(7))*4;
-  minVariationPitch= (EEPROM.read(8))*4;
-  maxVariationPitch= (EEPROM.read(9))*4;
-  minVariationRoll=  (EEPROM.read(10))*4;
-  maxVariationRoll=  (EEPROM.read(11))*4;
-  minVariationYaw=   (EEPROM.read(12))*4;
-  maxVariationYaw=   (EEPROM.read(13))*4;
+  maxRoll =           (EEPROM.read(5))*4;
+  minYaw =            (EEPROM.read(6))*4;
+  maxYaw  =            (EEPROM.read(7))*4;
+  minVariationPitch  = (EEPROM.read(8))*4;
+  maxVariationPitch  = (EEPROM.read(9))*4;
+  minVariationRoll   =  (EEPROM.read(10))*4;
+  maxVariationRoll   =  (EEPROM.read(11))*4;
+  minVariationYaw    =   (EEPROM.read(12))*4;
+  maxVariationYaw    =   (EEPROM.read(13))*4;
   
-  Serial.print(address);
-  Serial.print("\t");
+  
+  Serial.print("\t minPitch");
   Serial.print(minPitch, DEC);
-  Serial.println();
+  Serial.print("\t maxPitch  ");
+  Serial.print( maxPitch );
+   Serial.print("\t minRoll ");
+  Serial.print( minRoll );
+   Serial.print("\t   maxRoll");
+  Serial.print( maxRoll  );
+   Serial.print("\t minYaw ");
+  Serial.print( minYaw );
+   Serial.print("\t maxYaw  ");
+  Serial.print( maxYaw  );
+   Serial.print("\t minVariationPitch  ");
+  Serial.print( minVariationPitch  );
+   Serial.print("\t maxVariationPitch ");
+  Serial.print( maxVariationPitch );
+  Serial.print("\t minVariationRoll ");
+  Serial.print( minVariationRoll );
+  Serial.print("\t maxVariationRoll ");
+  Serial.print( maxVariationRoll );
+  Serial.print("\t  minVariationYaw ");
+  Serial.print(  minVariationYaw );
+  Serial.print("\t maxVariationYaw ");
+  Serial.print( maxVariationYaw );
+  
+  Serial.println( );
   
     
   delay(500);

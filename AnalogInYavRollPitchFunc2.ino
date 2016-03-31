@@ -1,6 +1,6 @@
  #include <EEPROM.h>
  
-//#define Button_1      5//че то какая то фигня с этим пином
+#define Button_1      5//че то какая то фигня с этим пином
 // #define Button_2      13
 // #define Button_3      12
 const int analogInYawPin = A0;  // резистор джоя по Yaw
@@ -37,14 +37,14 @@ int maxVariationPitch=580; int maxVariationRoll=580; int maxVariationYaw=580;
 int minPitch, minRoll, minYaw=0;
 int maxPitch, maxRoll, maxYaw= 1023;
 void setup() {
-//    pinMode(Button_1, INPUT_PULLUP);
+    pinMode(Button_1, INPUT_PULLUP);
 //    pinMode(Button_2, INPUT_PULLUP);
 //    pinMode(Button_3, INPUT_PULLUP);
     pinMode(forward_agoPinR, OUTPUT);
     pinMode(forward_agoPinL, OUTPUT);
      pinMode(LRPin, OUTPUT);
   Serial.begin(9600); 
- // calibration();
+  calibration();
 }
 
 
