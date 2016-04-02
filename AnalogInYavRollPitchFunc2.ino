@@ -44,7 +44,7 @@ void setup() {
     pinMode(forward_agoPinL, OUTPUT);
      pinMode(LRPin, OUTPUT);
   Serial.begin(9600); 
-  calibration();
+    
 }
 
 
@@ -64,14 +64,17 @@ void loop() {
   outputPitchD = map(Pitch, 440, 0, 0, 255); 
   outputYawL = map(Yaw, 580, 1023, 0, 255); 
   outputYawR = map(Yaw, 440, 0, 0, 255);
- //=============== работа дифференциала при поворотах и движение впередх-назад ========================
- differentialForward_ago();
+  
+ // if (But==1) {int time = millis();
+    //if (((But==1)&& ( millis()- time>3000)) {calibration();}}
+ differentialForward_ago();// работа дифференциала при поворотах и движение впередх-назад
   
   tankSpread ();//танковый разворот
      
  Sving();//Swing
   
    smoothRunning();// плавная работа бортовых моторов
+   
    // ====================  пишем значения в исполнительные выходы=============================        
      analogWrite(analogWriteRPin, tvist);  //tvist 
      digitalWrite( LRPin, tvistFlag);// tvistFlag  реверс руля
